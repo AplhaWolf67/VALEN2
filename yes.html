@@ -3,42 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> LESSSSSSSSS GOOOOOO ❤️</title>
+  <title>LESSSSSSSSS GOOOOOO ❤️</title>
+  <!-- Font Awesome for beautiful heart icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Custom styles -->
   <link rel="stylesheet" href="style.css">
   <style>
     .message {
       color: #ff4757;
-      font-size: 2rem; /* Reduced from 2.5rem to 2rem */
+      font-size: 2rem;
       font-weight: bold;
       margin-top: 30px;
+    }
+    
+    /* IMAGE CROPPING - Removes sides, keeps center */
+    .image-wrapper {
+      width: 100%;
+      max-width: 450px;  /* Adjust overall width */
+      height: 320px;     /* Adjust height to control cropping */
+      margin: 0 auto 30px auto;
+      overflow: hidden;  /* This hides the cropped parts */
+      border: none;
+    }
+    
+    .image-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;     /* Crops to fill container */
+      object-position: center; /* Keeps the center */
+      display: block;
+    }
+    
+    /* Mobile adjustments */
+    @media screen and (max-width: 600px) {
+      .image-wrapper {
+        height: 280px;  /* Slightly shorter on mobile */
+        max-width: 100%;
+      }
     }
   </style>
 </head>
 <body>
+  <!-- Falling hearts with Font Awesome icons -->
   <div class="hearts">
-    <div class="heart">❤️</div>
-    <div class="heart">❤️</div>
-    <div class="heart">❤️</div>
-    <div class="heart">❤️</div>
-    <div class="heart">❤️</div>
-    <div class="heart">❤️</div>
-    <div class="heart">❤️</div>
-    <div class="heart">❤️</div>
-    <div class="heart">❤️</div>
-    <div class="heart">❤️</div>
-    <div class="heart">❤️</div>
-    <div class="heart">❤️</div>
-    <div class="heart">❤️</div>
-    <div class="heart">❤️</div>
-    <div class="heart">❤️</div>
-    <div class="heart">❤️</div>
-    <div class="heart">❤️</div>
-    <div class="heart">❤️</div>
-    <div class="heart">❤️</div>
-    <div class="heart">❤️</div>
+    <div class="heart"><i class="fas fa-heart"></i></div>
+    <div class="heart"><i class="fas fa-heart"></i></div>
+    <div class="heart"><i class="fas fa-heart"></i></div>
+    <div class="heart"><i class="fas fa-heart"></i></div>
+    <div class="heart"><i class="fas fa-heart"></i></div>
+    <div class="heart"><i class="fas fa-heart"></i></div>
+    <div class="heart"><i class="fas fa-heart"></i></div>
+    <div class="heart"><i class="fas fa-heart"></i></div>
+    <div class="heart"><i class="fas fa-heart"></i></div>
+    <div class="heart"><i class="fas fa-heart"></i></div>
+    <div class="heart"><i class="fas fa-heart"></i></div>
+    <div class="heart"><i class="fas fa-heart"></i></div>
+    <div class="heart"><i class="fas fa-heart"></i></div>
+    <div class="heart"><i class="fas fa-heart"></i></div>
+    <div class="heart"><i class="fas fa-heart"></i></div>
+    <div class="heart"><i class="fas fa-heart"></i></div>
+    <div class="heart"><i class="fas fa-heart"></i></div>
+    <div class="heart"><i class="fas fa-heart"></i></div>
+    <div class="heart"><i class="fas fa-heart"></i></div>
+    <div class="heart"><i class="fas fa-heart"></i></div>
   </div>
+
   <div class="container">
-    <img src="PIC4.jpg" alt="Happy Valentine's Day!">
+    <!-- Image wrapper with cropping -->
+    <div class="image-wrapper">
+      <img src="PIC4.jpg" alt="Happy Valentine's Day!">
+    </div>
     <p class="message">LESSSSSSS GOOOOOOOOO ❤️</p>
   </div>
 </body>
