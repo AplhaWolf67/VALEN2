@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
   <title>Oh No! 😿</title>
   <style>
     body {
@@ -14,32 +14,178 @@
       align-items: center;
       min-height: 100vh;
       font-family: Arial, sans-serif;
+      overflow-x: hidden;
+      width: 100%;
     }
+    
     .container {
       text-align: center;
       padding: 20px;
+      max-width: 600px;
+      width: 100%;
+      box-sizing: border-box;
     }
+    
     img {
-      max-width: 120% ; /* Reduced from 100% to 60% */
+      max-width: 60%; /* Fixed from 120% to 60% */
       height: auto;
       margin-bottom: 30px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
+    
     .message {
       color: #ff0000;
       font-size: 2rem;
       font-weight: bold;
       text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+      margin: 20px 0 0 0;
+      padding: 0 10px;
+      word-break: break-word;
+    }
+    
+    /* Optional: Add a "Go Back" button for better mobile navigation */
+    .back-button {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 12px 25px;
+      background: #333;
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      font-size: 1rem;
+      transition: background 0.3s;
+      border: 1px solid #666;
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+    }
+    
+    .back-button:active {
+      transform: scale(0.98);
+    }
+    
+    /* === MOBILE OPTIMIZATIONS === */
+    
+    /* Tablets and small desktops */
+    @media screen and (max-width: 768px) {
+      .message {
+        font-size: 1.8rem;
+      }
+      
+      img {
+        max-width: 70%;
+      }
+    }
+    
+    /* Mobile phones */
+    @media screen and (max-width: 600px) {
+      .container {
+        padding: 15px;
+      }
+      
+      .message {
+        font-size: 1.6rem; /* Smaller text on mobile */
+        margin-top: 15px;
+      }
+      
+      img {
+        max-width: 80%; /* Larger image on mobile for better visibility */
+        margin-bottom: 20px;
+      }
+      
+      .back-button {
+        margin-top: 30px;
+        padding: 14px 30px; /* Larger touch target */
+        font-size: 1.1rem;
+        width: 80%;
+        max-width: 280px;
+        box-sizing: border-box;
+      }
+    }
+    
+    /* Small phones */
+    @media screen and (max-width: 400px) {
+      .message {
+        font-size: 1.4rem;
+      }
+      
+      img {
+        max-width: 90%;
+      }
+      
+      .back-button {
+        width: 90%;
+        padding: 14px 20px;
+      }
+    }
+    
+    /* Landscape orientation */
+    @media screen and (max-width: 900px) and (orientation: landscape) {
+      body {
+        padding: 20px 0;
+      }
+      
+      .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        max-width: 100%;
+      }
+      
+      .left-content {
+        flex: 1;
+      }
+      
+      .right-content {
+        flex: 1;
+      }
+      
+      .message {
+        font-size: 1.6rem;
+        margin-top: 0;
+      }
+      
+      img {
+        max-width: 70%;
+        margin-bottom: 10px;
+      }
+      
+      .back-button {
+        margin-top: 20px;
+        width: auto;
+      }
+    }
+    
+    /* Prevent hover effects on mobile (prevents stuck states) */
+    @media (hover: none) and (pointer: coarse) {
+      .back-button:hover {
+        background: #333; /* Same as normal state */
+      }
+    }
+    
+    /* Fix for iOS tap highlight */
+    a, .back-button {
+      -webkit-tap-highlight-color: transparent;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <img src="PIC3.jpg" alt="Give it back!">
-    <p class="message">You Picked the wrong one twin! </p>
+    <div class="left-content">
+      <img src="PIC3.jpg" alt="Give it back!">
+    </div>
+    <div class="right-content">
+      <p class="message">You Picked the wrong one twin! 😿</p>
+      
+      <!-- OPTIONAL: Add this "Go Back" button for better mobile navigation -->
+      <!-- Comment this out if you don't want it -->
+      <div>
+        <a href="index.html" class="back-button">← Go Back and Choose Again</a>
+      </div>
+    </div>
   </div>
 </body>
-
 </html>
-
-
-
